@@ -1,16 +1,18 @@
 function displayTemp(response) {
   let temperature = Math.round(response.data.temperature.current);
   let currentTemp = document.querySelector(".current-temperature-value");
-  currentTemp.innerHTML = `${temperature}`;
-  let newCity = document.querySelector("#current-city");
-  newCity.innerHTML = response.data.city;
-
+let newCity = document.querySelector("#current-city");
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = response.data.temperature.humidity;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = response.data.wind.speed;
   let description = document.querySelector("#description");
-  description.innerHTML = response.data.condition.description;
+let icon = document.querySelector(".current-temperature-icon");
+  
+newCity.innerHTML = response.data.city;
+currentTemp.innerHTML = `${temperature}`;
+description.innerHTML = response.data.condition.description;
+humidity.innerHTML = `${response.data.temperature.humidity}%`;
+wind.innerHTML = `${response.data.wind.speed}km/h`;
+icon.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
 }
 
 function search(event) {
