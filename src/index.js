@@ -8,7 +8,7 @@ let newCity = document.querySelector("#current-city");
 let icon = document.querySelector(".current-temperature-icon");
   
 newCity.innerHTML = response.data.city;
-currentTemp.innerHTML = `${temperature}`;
+currentTemp.innerHTML = `${temperature}°C`;
 description.innerHTML = response.data.condition.description;
 humidity.innerHTML = `${response.data.temperature.humidity}%`;
 wind.innerHTML = `${response.data.wind.speed}km/h`;
@@ -59,3 +59,5 @@ let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
+
+searchCity("London");
