@@ -46,8 +46,9 @@ main {
     padding: 30px 0;
 }
 
-.current-temperature {
+.current-temp-container {
     font-size: 48px;
+    display: flex;
 }
 
 .current-weather {
@@ -91,25 +92,32 @@ main {
 }
 
 .weather-forecast {
-    margin-top: 20px;
-    text-align: center;
     display: flex;
     justify-content: space-around;
-   }
+    margin-top: 30px;
+}
 
 .weather-forecast-date {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
     font-size: 16px;
-    opacity: 0.6;
 }
 
-.weather-forecast-temp-max {
-font-size: 16px;
-color: #f65282;
+.weather-forecast-icon {
+    font-size: 38px;
+    text-align: center;
 }
 
-.weather-forecast-temp-min {
-color: #f65282;
-opacity: 0.6;
+.weather-forecast-temperatures {
+    text-align: center;
+    color: #f65282;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.weather-forecast-temperature {
+    padding: 0 8px;
 }
 
 footer {
